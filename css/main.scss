@@ -1,0 +1,108 @@
+
+$dark-blue : #022999; 
+$orange:#f27d92;
+$sky-blue:#55bdca;
+$light-blue:#96ffff;
+$light:#c8eff9;
+//new 
+$yellow:#fedc3d;
+$black:#000000;
+$azure:#01abaa;
+$peach:#fea680;
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-rows: 1.5fr 4fr 2fr 1fr;
+    grid-template-areas: 
+    "main   main   header"
+    "main   main   aside"
+    "card-1 card-2 aside"
+    "footer footer aside"
+    ;
+    //dark
+}
+header{
+    grid-area: header;
+    background-color: $black;
+    color: #fff;
+    display: flex;
+    justify-content: end;
+    align-items:center;
+    gap: 1em;
+    padding: 2em;
+    a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;  
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    i{
+        color: $yellow;
+        font-size: 2.5rem;
+        transition: 0.9s;
+    }
+    i:hover{
+        color: $peach;
+        transition: 0.9s;
+        transform:rotate(360deg);
+    }
+}
+main{
+    grid-area: main;
+    background-color: $yellow;
+    padding: 2em;
+    h1{
+        margin-top: 0;
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.2rem;
+        width: 30em;
+    }
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 5px;
+    font-size: 1.5rem;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card-1{
+    grid-area: card-1;
+    background-color: $azure;
+    color: #fff;
+}
+.card-2{
+    grid-area: card-2;
+    background-color: $peach;
+    
+}
+aside{
+    grid-area: aside;
+    background-color: $azure;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.center {
+    padding-top: 2em;
+    text-align: center;
+    
+}
+footer{
+    grid-area: footer;
+    background-color: $black;
+    color: #fff;
+}
